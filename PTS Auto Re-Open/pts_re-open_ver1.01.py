@@ -5,8 +5,11 @@ import os
 import urllib.request
 from os import path
 
-drives = os.listdir('z:\\')
-print(drives)
+try:
+    drives = os.listdir('z:\\')
+    print(drives)
+except Exception as e:
+    logging.error(str(e))
 
 def connect(host=r'http://google.com'):
     try:
@@ -31,7 +34,7 @@ while True:
     try:
         chk_process = next(item for item in process_ls if item["name"] == "notepad++.exe")
 
-        print(chk_process)
+        #print(chk_process)
         #print(type(chk_process))
         print(chk_process['name'])
     
@@ -44,8 +47,15 @@ while True:
     if connect():
         print("Internet Connected")
         
+        try:
+            drives = os.listdir('t:\\')
+            #print(drives)
+        except Exception as e:
+            logging.error(str(e))
+            print("Line Send -> Connot connect to MapDrive.")
+        
     else:
         print("Line Send -> Cannot connect the internet.")
-        
-
     time.sleep(1)
+    break
+ 
