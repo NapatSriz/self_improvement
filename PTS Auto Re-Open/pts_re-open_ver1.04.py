@@ -18,7 +18,7 @@ while True:
             #print(pinfo)
             process_ls.append(pinfo)
 
-    print(process_ls)
+    #print(process_ls)
 
     try:
         chk_process = next(item for item in process_ls if item["name"] == "notepad++.exe")

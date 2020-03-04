@@ -23,12 +23,12 @@ while True:
         chk_process = next(item for item in process_ls if item["name"] == "notepad++.exe")
     except Exception as e:
         #os.startfile(r'C:\Program Files\Notepad++\notepad++.exe')
-        logging.error(str(e))
+        #logging.error(str(e))
         print('Re-open program')
         
         try:
             drives = os.listdir('z:\\')
-            #print(drives)
+            print(drives)
         except Exception as e:
             logging.error(str(e))
             
