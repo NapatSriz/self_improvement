@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import sys
 
 col_names = ['Date', 'Serial','Status','Result','CODE1','Status1','CODE2','Status2','MC','CELL','S1','S2','S3','S4','S5','S6','S7','S8','AVG']
 
